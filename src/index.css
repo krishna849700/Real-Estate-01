@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B1D21;
+  --color-accent: #FF385C;
+  --color-surface: #fbf9f9;
+  --color-surface-dim: #dbdad9;
+  --color-surface-container: #efeded;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.6) 100%);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+  }
+  .line-bg {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 50px 100%;
+  }
+}
+
+body {
+  @apply font-sans bg-surface text-primary antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  @apply font-serif;
+}
